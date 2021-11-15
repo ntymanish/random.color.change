@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Random color</title>
+    <link href="randomclr.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+   <div class="color">
+       <span id="man"> #928ACD</span><br>
+       <button onclick="key()">hit me to change color</button>
+   </div>
+    
+   <script>
+       function key (){
+           var color, symbol;
+           symbol= '0123456789ABCDEF';
+           color= '#';
+           for(var a=0; a<6; a++){
+           color = color + symbol[Math.floor(Math.random()*16)];
+            }
+           
+            document.body.style.background=color;
+            document.getElementById('man').innerText=color;
+       }
+   </script>
+</body>
+</html>
